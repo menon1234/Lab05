@@ -20,7 +20,7 @@
 #'
 #' @param MunicipalityInput takes in this argument and plots a graph.
 #' @import ggplot2
-#' @return
+#' @return returns a plot with votecount
 #' @export
 #'
 #' @examples
@@ -55,7 +55,7 @@
 #' @description Gives the percentage of votes for each municipality
 #' @param vpert this argument returns the plot for parties vs vote%
 #'
-#' @return
+#' @return Return a plot with votepercentage
 #' @export
 #' @import ggplot2
 #' @examples
