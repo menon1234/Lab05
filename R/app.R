@@ -25,7 +25,10 @@ ui <-fluidPage(
 
       )
     ),
-    mainPanel (plotOutput("p")),
+    mainPanel (plotOutput("g")),
+                br(),
+                br(),
+              plotOutput("g2")
 
   )
 )
@@ -33,7 +36,13 @@ ui <-fluidPage(
 server<-function(input,output)
 {
   observeEvent(input$button_press,{
-    output$p<-renderPlot({
+    output$g<-renderPlot({
+      source("./Municipality_Statistics.R")
+      MunicipalityResults(MunicipalityInput = (input$MunicipalityInput))
+    })
+  })
+  observeEvent(input$button_press,{
+    output$g2<-renderPlot({
       source("./Municipality_Statistics.R")
       MunicipalityResults(MunicipalityInput = (input$MunicipalityInput))
     })
