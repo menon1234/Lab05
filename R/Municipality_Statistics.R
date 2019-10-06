@@ -19,7 +19,7 @@
 #' MunicipalityInput
 #'
 #' @param MunicipalityInput takes in this argument and plots a graph.
-#' @import ggplot2
+#' @import
 #' @return returns a plot with votecount
 #' @export
 #'
