@@ -22,7 +22,9 @@ ui <-fluidPage(
       selectInput("MunicipalityInput","Municipality",
                   unique(as.charactar(get_data_dataframe$Municipality)),
                   actionButton("button_press","Statistics"),
-
+      selectInput("PercentageInput","Municipality"
+                  unique(as.charactar(get_data_dataframe$Municipality)),
+                  actionButton("button_press","Statistics"),
       )
     ),
     mainPanel (plotOutput("g")),
@@ -44,7 +46,7 @@ server<-function(input,output)
   observeEvent(input$button_press,{
     output$g2<-renderPlot({
       source("./Municipality_Statistics.R")
-      MunicipalityResults(MunicipalityInput = (input$MunicipalityInput))
+      MunicipalityResults(PercentageInput = (input$PercentageInput))
     })
   })
 }

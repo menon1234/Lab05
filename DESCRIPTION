@@ -2,9 +2,9 @@ Package: Lab05
 Type: Package
 Title: Gives the plots of the vote output of different municipalities
 Version: 0.1.0
-Author: Sreenand.S & feng
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: Fengjuanchen and Sreenand.S
+Maintainer: Sreenand.S <nandu.neo@gmail.com> Fengjuan Chen <fengjuanchen5@gmail.com>
+Description: Gives the different plots for each municipality
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
