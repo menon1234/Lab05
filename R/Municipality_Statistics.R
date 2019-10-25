@@ -5,17 +5,20 @@
   library(ggplot2)
   library(dplyr)
   library(readxl)
+  library(curl)
 
 
   #Votes from each municipality
 #' MunicipalityInput
+#' @import ggplot2
 #'
 #' @param MunicipalityInput takes in this argument and plots a graph.
-#' @import
 #' @return returns a plot with votecount
 #' @export
 #'
-#' @examples
+#' @example
+#'
+#'
 #' {
 #'
 #'  Municipality(MunicipalityInput =   "Stockholms län")
@@ -36,13 +39,18 @@
       municipality_temp <- get_data_dataframe[get_data_dataframe$Municipality == MunicipalityInput,]
       Municipality_df <- municipality_temp[,-c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,28,29)]
 
+
+     Municipality_df <- Municipality_df[-1,]
+     print(Municipality_df)
       trans_Muni_df<-t(Municipality_df)
+      print(trans_Muni_df[,])
       row.names(trans_Muni_df) <-c("Municipality","M","C","FP","KD","S","V","MP","SD","FI","OVR","BLANK","OG")
       x_axis<-row.names(trans_Muni_df)
       y_axis<-as.vector(trans_Muni_df[,2])
       Partynames<-vector()
       Votecount<-vector()
       fdf<-data.frame(Partynames= x_axis, Votecount =  y_axis)
+      print(fdf)
       g<-ggplot(data =fdf,aes (x=Partynames,y = Votecount)) + geom_bar(stat="identity") + geom_text(aes(label=Votecount), vjust=1.6, color="black", size=3.5) +
         theme_minimal() + labs(title = "Municipality Result")
 
@@ -53,25 +61,5 @@
   }
 
 
-#
-# Votepercentage<-function(vpert)
-# {
-#   if( is.character(vpert)){
-#     percentage_temp <- get_data_dataframe[get_data_dataframe$Municipality == vpert,]
-#     percentage_df<-percentage_temp[,-c(1,3,4,6,8,10,12,14,16,18,20,22,24,26,28)]
-#
-#     trans_per_df<-t(percentage_df)
-#     row.names(trans_per_df) <-c("Municipality","M%","C%","FP%","KD%","S%","V%","MP%","SD%","FI%","OVR%","BLANK%","OG%","Turnout%")
-#     x_axis<-row.names(trans_per_df)
-#     y_axis<-as.vector(trans_per_df[,1])
-#     Municipalities<-vector()
-#     VotePercent<-vector()
-#     fdf3<-data.frame(Municipalities,VotePercent)
-#     g2<-ggplot(data =fdf3,aes (x=Municipalities,y = VotePercent)) + geom_bar(stat="identity") + geom_text(aes(label=VotePercent), vjust=1.6, color="black", size=3.5) +
-#       theme_minimal() + labs(title = "Percentage Result")
-#     return(g2)
-#   } else print("Error:Input type invalid")
-#
-# }
-#
- Municipality(MunicipalityInput =   "Stockholms län")
+
+Municipality(MunicipalityInput ="Kronobergs län")

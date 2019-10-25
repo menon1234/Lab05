@@ -15,11 +15,6 @@ returns a plot with votecount
 \description{
 MunicipalityInput
 }
-\examples{
-
-
-{
-
- Municipality(MunicipalityInput =   "Stockholms län")
-}
+\references{
+"google.com"
 }

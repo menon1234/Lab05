@@ -29,11 +29,13 @@ if(is.character(PercentageInput))
 {
 
   tempercentage <- retrieve_data3[retrieve_data3$Municipality == PercentageInput,]
-  y_axis2<-as.vector(tempercentage[,1])
-  x_axis2<-row.names(c(1,2,4:17))
+  transdf<-t(tempercentage)
+  y_axis2<-as.vector(tempercentage[,2])
+  x_axis2<-row.names(retrieve_data3[c(1,2,4:17),])
   partynames<-vector()
   municipalities<-vector()
-  fdf2<- data.frame(partynames = x_axis2, municipalities = y_axis2)
+  fdf2<- data.frame( partynames = x_axis2, municipalities =  y_axis2)
+ # print(fdf2)
   g2<-ggplot(data =fdf2,aes (x=partynames,y = municipalities)) + geom_bar(stat="identity") + geom_text(aes(label=municipalities), vjust=1.6, color="black", size=3.5) +
     theme_minimal() + labs(title = "Percentage Result")
   return(g2)
@@ -41,4 +43,4 @@ if(is.character(PercentageInput))
 else print("error:Invalid Input")
 }
 
-
+PercentageCalc(PercentageInput =   "Kronobergs län")
