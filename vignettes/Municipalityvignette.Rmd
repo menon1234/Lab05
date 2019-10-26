@@ -31,8 +31,8 @@ library(Lab05)
 Municipality(MunicipalityInput = "Dalarnas län")
 PercentageCalc(PercentageInput = "Dalarnas län")
 ```
-```{r run, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-# run the shiny app from github
-shiny::runGitHub('Lab05', 'menon1234')
-```
+# ```{r run, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# # run the shiny app from github
+# shiny::runGitHub('Lab05', 'menon1234')
+# ```
 

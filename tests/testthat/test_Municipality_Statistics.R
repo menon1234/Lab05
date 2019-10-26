@@ -2,14 +2,14 @@
 # Function to be tested
 context("Municipality")
 
-
-test_that("found invalid county name", {
+#test for the correct municipality
+test_that("invalid name entered", {
   expect_error(Municipality(MunicipalityInput = "Djikstra"))
   expect_error(Municipality(MunicipalityInput = ""))
 })
 
-
-test_that("Found special characters",{
+#test for the special characters
+test_that("Special characters found",{
   expect_error(Municipality(MunicipalityInput = "!@#$#%^"))
   expect_error(Municipality(MunicipalityInput = "1234567"))
 }
