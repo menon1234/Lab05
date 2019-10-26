@@ -19,6 +19,7 @@ library(Lab05)
 ```
 
 ## Function in this Package
+
 -------
 <p> A program representing the comprehensive elections that happened in sweden in the year 2014.This package mainly consists of two functions which are the total avg votes received for each municipality and the second funciton [http://www.val.se/val/val2014/statistik/index.html](http://www.val.se/val/val2014/statistik/index.html)
 
@@ -27,12 +28,8 @@ library(Lab05)
 <p> MunicipalityPercentage represents the total votepercent attained by each municipality. It takes the name Percentageinput as the character and then a bar chart plot is representated against the  municipality vs the the total average percentage no. of votes received by that certain muncipality for each party.
 
 <p> The functions are defined in a separate R file and passed into shiny app. This way it will makes the process easy. An example for both the functions are shown below.
+
 ```{r example,eval=TRUE,fig.width = 14, fig.height = 9, out.width = "588", out.height = "378"}
 Municipality(MunicipalityInput = "Dalarnas län")
 PercentageCalc(PercentageInput = "Dalarnas län")
 ```
-# ```{r run, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-# # run the shiny app from github
-# shiny::runGitHub('Lab05', 'menon1234')
-# ```
-
