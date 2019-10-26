@@ -2,7 +2,7 @@
 % Please edit documentation in R/getmuni.r
 \name{getColumns}
 \alias{getColumns}
-\title{To check the peecentage of the election results in the municipalities}
+\title{To check the average percentage election result from each section of the municipality}
 \usage{
 getColumns()
 }
@@ -10,7 +10,7 @@ getColumns()
 returns a graph showing the plot between the percentage of party votes and the municipality
 }
 \description{
-To check the peecentage of the election results in the municipalities
+To check the average percentage election result from each section of the municipality
 }
 \references{
 "google.com"

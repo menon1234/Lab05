@@ -2,7 +2,7 @@
 % Please edit documentation in R/MunicipalityPercentage.R
 \name{PercentageCalc}
 \alias{PercentageCalc}
-\title{To check the peecentage of the election results in the municipalities}
+\title{To check the percentage of the election results in the municipalities}
 \usage{
 PercentageCalc(PercentageInput)
 }
@@ -13,7 +13,7 @@ PercentageCalc(PercentageInput)
 returns a graph showing the plot between the percentage of party votes and the municipality
 }
 \description{
-To check the peecentage of the election results in the municipalities
+To check the percentage of the election results in the municipalities
 }
 \references{
 "google.com"
