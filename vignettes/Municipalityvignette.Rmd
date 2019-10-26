@@ -1,0 +1,37 @@
+---
+title: "Comprehensive statistics on the 2014 election in Sweden"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{myvignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Lab05)
+```
+
+# Function in this Package
+<p> This package is to represent the election results of Sweden in the year 2014. This package has two functions. The source is received with a url.
+
+<p> CountyResults is to represent the votes for each party in each county. It takes argument, county_name as character and return the bar plot for the votes for each party.
+
+<p> MunicipalityResults is to represent the votes for each party in each municipality. It takes the argument, municipality_name as character and return the bar plot for the votes for each party.
+
+<p> The functions are defined in a separate R file and passed into shiny app. This way it will makes the process easy. An example for both the functions are shown below.
+```{r example,eval=TRUE,fig.width = 14, fig.height = 9, out.width = "588", out.height = "378"}
+Municipality(MunicipalityInput = "Dalarnas län")
+PercentageCalc(PercentageInput = "Dalarnas län")
+```
+```{r run, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+# run the shiny app from github
+shiny::runGitHub('Lab05', 'menon1234')
+```
+

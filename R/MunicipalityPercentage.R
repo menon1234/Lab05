@@ -43,7 +43,7 @@ if(is.character(PercentageInput))
 
   partynames<-vector()
   municipalities<-vector()
-  fdf2<- data.frame( partynames = x_axis2, municipalities =  y_axis2)
+  fdf2<- data.frame( Partynames = x_axis2, Votepercentge =  y_axis2)
  # print(fdf2)
   g2<-ggplot(data =fdf2, aes (x=partynames,y = municipalities)) + geom_bar(stat="identity") + geom_text(aes(label=municipalities), vjust=1.6, color="black", size=3.5) +
     theme_minimal() + labs(title = "Percentage Result")
