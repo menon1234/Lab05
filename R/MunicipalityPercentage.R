@@ -2,7 +2,7 @@
 library(dplyr)
 library(httr)
 library(readxl)
-#' To check the peecentage of the election results in the municipalities
+#' To check the percentage of the election results in the municipalities
 #'
 #' @param PercentageInput this imports the municipality which from which each party has received how man votes
 #'

@@ -15,7 +15,7 @@ ui <- fluidPage(
       # actionButton("button_1", "Municipality Results"),
 
       uiOutput('A_panel'),
-      actionButton("button_2", "Percentage Results")
+      actionButton("button_2", " Results")
 
     ),
     mainPanel(plotOutput("g"),plotOutput("g2"))
@@ -35,7 +35,7 @@ server<-function(input,output)
     source("./getmuni.r")
     retrieve_data3 = getColumns()
     selectInput("PercentageInput",
-                label = "Municiplaity%",
+                label = "Municiplaity Total and percentage votes",
                 unique(as.character(retrieve_data3$Municipality)))
   })
 

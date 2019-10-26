@@ -2,7 +2,7 @@
 library(dplyr)
 library(httr)
 library(readxl)
-#' To check the peecentage of the election results in the municipalities
+#' To check the average percentage election result from each section of the municipality
 #'
 #' @return returns a graph showing the plot between the percentage of party votes and the municipality
 #' @export
