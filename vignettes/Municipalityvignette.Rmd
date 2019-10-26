@@ -20,8 +20,7 @@ library(Lab05)
 
 ## Function in this Package
 -------
-<p> A program representing the comprehensive elections that happened in sweden in the year 2014.This package mainly consists of two functions which are the total avg votes received for each municipality and the second funciton showing the total voteprecentage of the whole municipality.The data has been scraped from the site
-"http://www.val.se/val/val2014/statistik/index.html."
+<p> A program representing the comprehensive elections that happened in sweden in the year 2014.This package mainly consists of two functions which are the total avg votes received for each municipality and the second funciton [http://www.val.se/val/val2014/statistik/index.html](http://www.val.se/val/val2014/statistik/index.html)
 
 <p> Munipality_statistics represents the total votes attained by each municipality. It takes the name Municipality input as the character and then a bar chart plot is representated against the  municipality vs the the total average no. of votes received by that certain muncipality for each party.
 
