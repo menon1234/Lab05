@@ -18,12 +18,14 @@ knitr::opts_chunk$set(
 library(Lab05)
 ```
 
-# Function in this Package
-<p> This package is to represent the election results of Sweden in the year 2014. This package has two functions. The source is received with a url.
+## Function in this Package
+-------
+<p> A program representing the comprehensive elections that happened in sweden in the year 2014.This package mainly consists of two functions which are the total avg votes received for each municipality and the second funciton showing the total voteprecentage of the whole municipality.The data has been scraped from the site
+"http://www.val.se/val/val2014/statistik/index.html."
 
-<p> CountyResults is to represent the votes for each party in each county. It takes argument, county_name as character and return the bar plot for the votes for each party.
+<p> Munipality_statistics represents the total votes attained by each municipality. It takes the name Municipality input as the character and then a bar chart plot is representated against the  municipality vs the the total average no. of votes received by that certain muncipality for each party.
 
-<p> MunicipalityResults is to represent the votes for each party in each municipality. It takes the argument, municipality_name as character and return the bar plot for the votes for each party.
+<p> MunicipalityPercentage represents the total votepercent attained by each municipality. It takes the name Percentageinput as the character and then a bar chart plot is representated against the  municipality vs the the total average percentage no. of votes received by that certain muncipality for each party.
 
 <p> The functions are defined in a separate R file and passed into shiny app. This way it will makes the process easy. An example for both the functions are shown below.
 ```{r example,eval=TRUE,fig.width = 14, fig.height = 9, out.width = "588", out.height = "378"}
