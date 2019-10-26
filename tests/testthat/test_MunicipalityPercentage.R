@@ -1,15 +1,15 @@
-# Test suits for county result
+# Test suits for percentage results
 # Function to be tested
-context("MunicipalityPercentage")
+context("PercentageCalc")
 
-# Test that function take available county name
-test_that("found invalid county name", {
+#test for correct municipality
+test_that("invalid name found", {
   expect_error(PercentageCalc(PercentageInput = "GG"))
   expect_error(PercentageCalc(PercentageInput = ""))
 })
 
-# test that no special characters or number in address
-test_that("Found special characters",{
+#test for special charactars
+test_that("Special characters Found ",{
   expect_error(PercentageCalc(PercentageInput = "!@#$$^&"))
   expect_error(PercentageCalc(PercentageInput = "12345"))
 }
