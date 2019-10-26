@@ -30,6 +30,8 @@ library(Lab05)
 <p> The functions are defined in a separate R file and passed into shiny app. This way it will makes the process easy. An example for both the functions are shown below.
 
 ```{r example,eval=TRUE,fig.width = 13, fig.height = 9, out.width = "588", out.height = "378"}
-Municipality(MunicipalityInput = "Dalarnas län")
+
 PercentageCalc(PercentageInput = "Dalarnas län")
+Municipality(MunicipalityInput = "Dalarnas län")
 ```
+
